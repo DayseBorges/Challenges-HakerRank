@@ -26,14 +26,15 @@
 // Each of the next  lines contains a string .
 
 strings = ["ab", "ab", "abc"] 
-strings = ["ab", "abc", "ab"] 
+queries = ["ab", "abc", "bc"] 
 
 function matchingStrings(strings, queries) {
     // Write your code here
-    for (let i of strings) {
-        for (let y of queries ) {
-            if (i === y) 
-            
-        }
-    }
+    let repete = [];
+    queries.forEach(i => {
+        repete.push(strings.filter(j => i === j).length)
+    })
+    return repete
 }
+
+console.log(matchingStrings(strings, queries));

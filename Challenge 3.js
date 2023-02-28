@@ -35,7 +35,7 @@
 
 // 19:05:45 
 
-let s = "08:05:45AM"
+let s = "12:05:45AM"
 function timeConversion(s) {
     // Write your code here
     if (s.includes("PM")) {
@@ -50,12 +50,12 @@ function timeConversion(s) {
     } else if  (s.includes("AM")) {
         s = s.slice(0, -2) 
         s = s.split(":")
-        let hr = s[0]
+        let hr = parseInt(s[0])
         if (hr === 12) {
-            hr = "00";
+            hr = "0";
         }
         s.splice(0, 1, hr)
-        s = s.join(":")
+        s = 0 + s.join(":")
     }
     return s
 }
