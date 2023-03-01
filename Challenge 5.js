@@ -20,19 +20,16 @@
 // The first line contains a single integer,n , the number of integers in the array.
 // The second line contains  space-separated integers that describe the values in a.
 
-let a = [1, 2, 3, 4, 3]
-
+let a = [1, 2, 3, 4, 3, 2, 1]
 
 function lonelyinteger(a) {
     // Write your code here
-    
-    for (let i of a) {
-        a.filter(j => {
-            i != j
-        })
-        return i
+    for (let i = 0; i < a.length; i++) {
+        let j = a.filter(j => j === a[i]) 
+        if (j.length === 1) {
+            return a[i]
+        }
     }
-    
 }
 
 console.log(lonelyinteger(a));
