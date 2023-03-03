@@ -35,7 +35,7 @@
 
 // 19:05:45 
 
-let s = "12:05:45AM"
+let s = "1:05:45AM"
 function timeConversion(s) {
     // Write your code here
     if (s.includes("PM")) {

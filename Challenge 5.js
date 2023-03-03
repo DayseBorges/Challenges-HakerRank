@@ -29,7 +29,7 @@ function lonelyinteger(a) {
         if (j.length === 1) {
             return a[i]
         }
-    }
+    } 
 }
 
 console.log(lonelyinteger(a));
