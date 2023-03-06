@@ -38,27 +38,27 @@
 // The first line contains an integer n, the number of items in arr.
 // Each of the next n lines contains an integer arr[i] where 0 <= i < n.
 
-let arr = [1, 1, 3, 2, 1, 2, 5]
+let arr = [1, 1, 3, 2, 1]
 
 function countingSort(arr) {
     if (arr.length === 0) return arr;
-    
-    let max = Math.max(...arr);
-    let min = Math.min(...arr);
-    let count = new Array(max - min + 1).fill(0)
-  
-    for (let i = 0; i < arr.length; i++) {
-        count[arr[i]] += 1;
-    }
+    let count = new Array(100).fill(0)  //
 
-    let j = 0;
-    for (let i = min; i <= max; i++){
-        while ( count[i] > 0) {
-            arr[j++] = i;
-            count[i]--;
-        }
+    for (let i = 0; i < arr.length; i++) {
+        count[arr[i]]++;
     }
-    return arr
+    //até esse ponto é para retornar o que o exercicio pede (só quantas vezes o numero aparece no array)
+    //seguindo a funcao, podemos obter o ordenamento do array:
+
+    // let j = 0;
+    // for (let i = min; i <= max; i++){
+    //     while ( count[i] > 0) {
+    //         arr[j++] = i;
+    //         count[i]--;
+    //     }
+    // }
+    //nesse caso ,aqui retornaria o arr.
+    return count
 } 
 
 console.log(countingSort(arr));
