@@ -42,7 +42,7 @@ let arr = [1, 1, 3, 2, 1]
 
 function countingSort(arr) {
     if (arr.length === 0) return arr;
-    let count = new Array(100).fill(0)  //
+    let count = new Array(100).fill(0)  //O método fill() é um método de array em JavaScript que preenche todos os elementos de um array com um determinado valor. E o new Array(100) cria um novo array com 100 posicoes.
 
     for (let i = 0; i < arr.length; i++) {
         count[arr[i]]++;
