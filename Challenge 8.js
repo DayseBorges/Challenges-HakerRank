@@ -38,20 +38,27 @@
 // The first line contains an integer n, the number of items in arr.
 // Each of the next n lines contains an integer arr[i] where 0 <= i < n.
 
-let arr = [1, 1, 3, 2, 1]
+let arr = [1, 1, 3, 2, 1, 2, 5]
 
 function countingSort(arr) {
-    // Write your code here
-    let max = 0;
-    let min = 0;
-    for (let num of arr) {
-        max < num ? max = num : min = num
+    if (arr.length === 0) return arr;
+    
+    let max = Math.max(...arr);
+    let min = Math.min(...arr);
+    let count = new Array(max - min + 1).fill(0)
+  
+    for (let i = 0; i < arr.length; i++) {
+        count[arr[i]] += 1;
     }
-    let aux = [min, max]
 
-    console.log(max);
-    console.log(min);
-    console.log(aux);
+    let j = 0;
+    for (let i = min; i <= max; i++){
+        while ( count[i] > 0) {
+            arr[j++] = i;
+            count[i]--;
+        }
+    }
+    return arr
 } 
 
 console.log(countingSort(arr));

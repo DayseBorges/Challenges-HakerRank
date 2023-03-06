@@ -55,13 +55,13 @@
 // Note: |x| is the absolute value of x
 [["11 2 4"], ["4 5 6"], ["10 8 -12"]]
 let arr = [["-10 3 0 5 -4"], ["2 -1 0 2 -8"], ["9 -2 -5 6 0"], ["9 -7 4 8 -2"], ["3 7 8 -5 0"]]
+
+
 function diagonalDifference(arr) {
     // Write your code here.
     let result = 0;
     let result2 = 0;
     for (let i = 0; i < arr.length; i++) {
-        
-    
         let format = arr[i][0].split(" ")
         let suma = format[i]*1
         result += suma 
@@ -74,5 +74,16 @@ function diagonalDifference(arr) {
     return Math.abs(result2 - result)
 
 }
-
+let a = "5" + 2 - "3"
+console.log(a);
 console.log(diagonalDifference(arr)); 
+
+// Resposta de outra pessoa:
+// let left = 0;
+//     let rigth = 0;
+//     for ( let x = 0; x < arr[0].length; x++) {
+//         left+=arr[x][x];
+//         rigth+=arr[x][(arr[x].length-1)-x];
+//     }
+//     return Math.abs(left-rigth);
+
