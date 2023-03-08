@@ -1,8 +1,8 @@
 // You will be given a list of 32 bit unsigned integers. Flip all the bits (1 -> 0 and 0 -> 1) and return the result as an unsigned integer.
 
 // Example
-// n = 9^10
-// 9^10 = 1001^2. We're working with 32 bits, so:
+// n = 9(10)
+// 9(10) = 1001(2). We're working with 32 bits, so:
 
 // 0000000000000000000000000000001001^2 = 9^10
 // 1111111111111111111111111111110110^2 = 4294967286^10
