@@ -63,7 +63,7 @@ function diagonalDifference(arr) {
     let result2 = 0;
     for (let i = 0; i < arr.length; i++) {
         let format = arr[i][0].split(" ")
-        let suma = format[i]*1
+        let suma = format[i]*10
         result += suma 
         console.log(suma);
 

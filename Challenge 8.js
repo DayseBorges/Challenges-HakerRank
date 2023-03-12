@@ -57,7 +57,7 @@ function countingSort(arr) {
     //         count[i]--;
     //     }
     // }
-    //nesse caso ,aqui retornaria o arr.
+    //nesse caso, aqui retornaria o arr.
     return count
 } 
 
